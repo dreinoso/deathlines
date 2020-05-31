@@ -30,9 +30,9 @@ class HomeFragment : BaseFragment(), SwipeRefreshLayout.OnRefreshListener {
 
     private var isLoading = false
 
-    private val adapter: AlbumListAdapter by lazy {
-        AlbumListAdapter()
-    }
+//    private val adapter: AlbumListAdapter by lazy {
+//        AlbumListAdapter()
+//    }
 
     private val viewModel: HomeViewModel by lazy {
         ViewModelProviders.of(this, viewModelFactory).get(HomeViewModel::class.java)
@@ -49,15 +49,15 @@ class HomeFragment : BaseFragment(), SwipeRefreshLayout.OnRefreshListener {
         when (albums) {
             is ResultState.Success -> {
                 hideLoading()
-                adapter.submitList(albums.data)
+                //adapter.submitList(albums.data)
             }
             is ResultState.Error -> {
                 hideLoading()
                 Toast.makeText(activity, albums.throwable.message, Toast.LENGTH_SHORT).show()
-                adapter.submitList(albums.data)
+                //adapter.submitList(albums.data)
             }
             is ResultState.Loading -> {
-                adapter.submitList(albums.data)
+                //adapter.submitList(albums.data)
             }
         }
         isLoading = false
@@ -70,19 +70,14 @@ class HomeFragment : BaseFragment(), SwipeRefreshLayout.OnRefreshListener {
         fragmentHomeSwp.setOnRefreshListener(this)
         fragmentHomeRcyMain.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
         fragmentHomeRcyMain.setHasFixedSize(true)
-        fragmentHomeRcyMain.adapter = adapter
+//        fragmentHomeRcyMain.adapter = adapter
 
-        adapter.albumItemClickEvent.applyIoScheduler().subscribe { it ->
-            viewModel.deleteAlbum(it)
-        }
+//        adapter.albumItemClickEvent.applyIoScheduler().subscribe { it ->
+//            viewModel.deleteAlbum(it)
+//        }
 
         showLoading()
     }
-
-    override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?): View? = inflater.inflate(
-            R.layout.fragment_home, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -93,5 +88,9 @@ class HomeFragment : BaseFragment(), SwipeRefreshLayout.OnRefreshListener {
     }
 
     override fun onRefresh() {
+    }
+
+    companion object {
+        fun newInstance(): HomeFragment = HomeFragment()
     }
 }

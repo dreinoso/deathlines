@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="32dp"
+    android:layout_width="match_parent">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:title="@string/goals"
+        android:icon="@drawable/ic_insert_invitation_black_24dp"/>
+
+    <item
+        android:id="@+id/navigation_tasks"
+        android:title="@string/tasks"
+        android:icon="@drawable/ic_format_list_bulleted_black_24dp"/>
+
+    <item
+        android:id="@+id/navigation_upcoming"
+        android:title="@string/upcoming"
+        android:icon="@drawable/ic_forward_black_24dp"/>
+
+</menu>
