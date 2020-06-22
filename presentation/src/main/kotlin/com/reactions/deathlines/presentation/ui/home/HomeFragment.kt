@@ -20,9 +20,6 @@ import com.reactions.deathlines.presentation.ui.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_home.*
 import javax.inject.Inject
 
-/**
- * on 9/7/2018.
- */
 class HomeFragment : BaseFragment(), SwipeRefreshLayout.OnRefreshListener {
 
     @Inject
