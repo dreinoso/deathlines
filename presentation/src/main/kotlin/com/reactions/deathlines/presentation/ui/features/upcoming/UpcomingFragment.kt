@@ -1,4 +1,4 @@
-package com.reactions.deathlines.presentation.ui.upcoming
+package com.reactions.deathlines.presentation.ui.features.upcoming
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

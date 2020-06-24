@@ -1,4 +1,4 @@
-package com.reactions.deathlines.presentation.ui.tasks
+package com.reactions.deathlines.presentation.ui.features.tasks
 
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle

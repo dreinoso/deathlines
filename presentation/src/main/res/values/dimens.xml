@@ -2,4 +2,7 @@
 <resources>
     <dimen name="text_margin">16dp</dimen>
     <dimen name="btn_corner_margin">16dp</dimen>
+    <dimen name="match_constraint">0dp</dimen>
+    <dimen name="btn_corner_width">64dp</dimen>
+    <dimen name="btn_corner_heigth">64dp</dimen>
 </resources>

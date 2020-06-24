@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_bottom_bar"
+    app:startDestination="@id/homeFragment2">
+
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.reactions.deathlines.presentation.ui.features.home.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment2_to_tasksFragment"
+            app:destination="@id/tasksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/upcomingFragment"
+        android:name="com.reactions.deathlines.presentation.ui.features.upcoming.UpcomingFragment"
+        android:label="fragment_upcoming"
+        tools:layout="@layout/fragment_upcoming" />
+    <fragment
+        android:id="@+id/tasksFragment"
+        android:name="com.reactions.deathlines.presentation.ui.features.tasks.TasksFragment"
+        android:label="tasks_fragment"
+        tools:layout="@layout/tasks_fragment" >
+        <action
+            android:id="@+id/action_tasksFragment_to_upcomingFragment"
+            app:destination="@id/upcomingFragment" />
+    </fragment>
+</navigation>

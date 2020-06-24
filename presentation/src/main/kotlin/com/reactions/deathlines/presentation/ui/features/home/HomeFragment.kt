@@ -1,4 +1,4 @@
-package com.reactions.deathlines.presentation.ui.home
+package com.reactions.deathlines.presentation.ui.features.home
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.paging.PagedList
@@ -14,13 +13,11 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.reactions.deathlines.domain.common.ResultState
 import com.reactions.deathlines.domain.entity.Entity
-import com.reactions.deathlines.presentation.R
 import com.reactions.deathlines.presentation.common.extension.observe
 import com.reactions.deathlines.presentation.databinding.FragmentHomeBinding
 import com.reactions.deathlines.presentation.ui.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_home.*
 import javax.inject.Inject
-
 
 class HomeFragment : BaseFragment(), SwipeRefreshLayout.OnRefreshListener {
 

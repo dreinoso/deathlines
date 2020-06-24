@@ -1,4 +1,4 @@
-package com.reactions.deathlines.presentation.ui.home
+package com.reactions.deathlines.presentation.ui.features.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

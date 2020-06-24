@@ -3,12 +3,15 @@ package com.reactions.deathlines.presentation.ui.base
 import android.app.ProgressDialog
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import androidx.lifecycle.ViewModel
 import com.reactions.deathlines.presentation.R
 import dagger.android.support.DaggerFragment
 
 abstract class BaseFragment : DaggerFragment() {
 
     private var mProgressDialog: ProgressDialog? = null
+
+//    protected lateinit var viewModel : ViewModel
 
     protected fun showLoading() {
         hideLoading()

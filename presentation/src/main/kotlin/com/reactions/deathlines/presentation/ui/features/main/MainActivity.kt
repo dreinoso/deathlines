@@ -1,12 +1,12 @@
-package com.reactions.deathlines.presentation.ui
+package com.reactions.deathlines.presentation.ui.features.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.reactions.deathlines.presentation.R
 import com.reactions.deathlines.presentation.ui.base.BaseActivity
-import com.reactions.deathlines.presentation.ui.home.HomeFragment
-import com.reactions.deathlines.presentation.ui.tasks.TasksFragment
-import com.reactions.deathlines.presentation.ui.upcoming.UpcomingFragment
+import com.reactions.deathlines.presentation.ui.features.home.HomeFragment
+import com.reactions.deathlines.presentation.ui.features.tasks.TasksFragment
+import com.reactions.deathlines.presentation.ui.features.upcoming.UpcomingFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {

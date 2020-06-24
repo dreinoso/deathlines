@@ -1,4 +1,4 @@
-package com.reactions.deathlines.presentation.ui.home
+package com.reactions.deathlines.presentation.ui.features.home
 
 import androidx.recyclerview.widget.DiffUtil
 import com.reactions.deathlines.domain.entity.Entity

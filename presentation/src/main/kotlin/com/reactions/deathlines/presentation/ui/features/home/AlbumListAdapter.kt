@@ -1,4 +1,4 @@
-package com.reactions.deathlines.presentation.ui.home
+package com.reactions.deathlines.presentation.ui.features.home
 
 import android.view.LayoutInflater
 import android.view.View
