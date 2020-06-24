@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.paging.PagedList
@@ -14,11 +15,12 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.reactions.deathlines.domain.common.ResultState
 import com.reactions.deathlines.domain.entity.Entity
 import com.reactions.deathlines.presentation.R
-import com.reactions.deathlines.presentation.common.extension.applyIoScheduler
 import com.reactions.deathlines.presentation.common.extension.observe
+import com.reactions.deathlines.presentation.databinding.FragmentHomeBinding
 import com.reactions.deathlines.presentation.ui.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_home.*
 import javax.inject.Inject
+
 
 class HomeFragment : BaseFragment(), SwipeRefreshLayout.OnRefreshListener {
 
@@ -26,10 +28,7 @@ class HomeFragment : BaseFragment(), SwipeRefreshLayout.OnRefreshListener {
     lateinit var viewModelFactory: ViewModelProvider.Factory
 
     private var isLoading = false
-
-//    private val adapter: AlbumListAdapter by lazy {
-//        AlbumListAdapter()
-//    }
+    private lateinit var  binding : FragmentHomeBinding
 
     private val viewModel: HomeViewModel by lazy {
         ViewModelProviders.of(this, viewModelFactory).get(HomeViewModel::class.java)
@@ -76,15 +75,25 @@ class HomeFragment : BaseFragment(), SwipeRefreshLayout.OnRefreshListener {
         showLoading()
     }
 
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        binding = FragmentHomeBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initView()
         observe(viewModel.albumsLiveData, ::showAlbums)
         observe(viewModel.deletedAlbumLiveData, ::onAlbumDeleted)
+        binding.ibAddGoal.setOnClickListener {navigateToAddGoalScreen()}
         viewModel.getAlbums()
     }
 
     override fun onRefresh() {
+    }
+
+    private fun navigateToAddGoalScreen() {
+
     }
 
     companion object {
