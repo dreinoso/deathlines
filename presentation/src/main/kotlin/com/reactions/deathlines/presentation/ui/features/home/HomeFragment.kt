@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.findNavController
 import androidx.paging.PagedList
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -82,15 +83,15 @@ class HomeFragment : BaseFragment(), SwipeRefreshLayout.OnRefreshListener {
         initView()
         observe(viewModel.albumsLiveData, ::showAlbums)
         observe(viewModel.deletedAlbumLiveData, ::onAlbumDeleted)
-        binding.ibAddGoal.setOnClickListener {navigateToAddGoalScreen()}
+        binding.ibAddGoal.setOnClickListener {v -> navigateToAddGoalScreen(v)}
         viewModel.getAlbums()
     }
 
     override fun onRefresh() {
     }
 
-    private fun navigateToAddGoalScreen() {
-
+    private fun navigateToAddGoalScreen(v: View) {
+        v.findNavController().navigate(HomeFragmentDirections.actionHomeFragment2ToAddGoalsActivity())
     }
 
     companion object {

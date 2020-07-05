@@ -8,4 +8,29 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="com.chainreaction.subtitle" parent="TextAppearance.AppCompat.Title">
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">@dimen/subtitle_size</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="com.chainreaction.formEditText" parent="TextAppearance.AppCompat.Body1">
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">@dimen/form_edit_text_size</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:padding">@dimen/form_edit_text_margin_padding</item>
+    </style>
+
+    <style name="com.chainreaction.button" parent="TextAppearance.AppCompat.Button">
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">@dimen/form_edit_text_size</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:padding">@dimen/form_edit_text_margin_padding</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <dimen name="form_edit_text_margin_horizontal">16dp</dimen>
+    <dimen name="form_edit_text_margin_padding">8dp</dimen>
 </resources>

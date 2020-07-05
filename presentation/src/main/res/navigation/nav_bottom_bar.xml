@@ -8,10 +8,14 @@
     <fragment
         android:id="@+id/homeFragment2"
         android:name="com.reactions.deathlines.presentation.ui.features.home.HomeFragment"
-        android:label="HomeFragment" >
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment2_to_tasksFragment"
             app:destination="@id/tasksFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_addGoalsActivity"
+            app:destination="@id/addGoalsActivity" />
     </fragment>
     <fragment
         android:id="@+id/upcomingFragment"
@@ -27,4 +31,9 @@
             android:id="@+id/action_tasksFragment_to_upcomingFragment"
             app:destination="@id/upcomingFragment" />
     </fragment>
+
+    <activity
+        android:id="@+id/addGoalsActivity"
+        android:name="com.reactions.deathlines.presentation.ui.features.goals.AddGoalsActivity"
+        android:label="AddGoalsActivity" />
 </navigation>

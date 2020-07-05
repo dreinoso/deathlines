@@ -23,5 +23,9 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+        <activity android:name="com.reactions.deathlines.presentation.ui.features.goals.AddGoalsActivity">
+
+        </activity>
     </application>
 </manifest>
