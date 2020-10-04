@@ -6,71 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".ui.features.goals.AddGoalsActivity">
 
-    <TextView
-        style="@style/com.chainreaction.subtitle"
-        android:id="@+id/tv_subtitle"
+    <fragment
+        android:id="@+id/activityAddGoalHostFragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/fill_all_fields"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/ll_form_margin"
+        android:layout_height="@dimen/match_constraint"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_subtitle">
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:orientation="vertical"
-        app:showDividers="middle">
-
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/et_name"
-                style="@style/com.chainreaction.formEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/enter_name" />
-
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/et_description"
-                style="@style/com.chainreaction.formEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/enter_description" />
-
-            <DatePicker
-                android:id="@+id/dp_limit_date"
-                style="@style/com.chainreaction.formEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="gone"
-                android:hint="@string/enter_date" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                style="@style/com.chainreaction.formEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/text_margin"
-                android:text="@string/tasks" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                style="@style/com.chainreaction.button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/text_margin"
-                android:text="@string/add_task"/>
-
-     </androidx.appcompat.widget.LinearLayoutCompat>
-    </androidx.core.widget.NestedScrollView>
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/nav_bottom_bar"
+        tools:layout="@layout/fragment_home" />
 </androidx.constraintlayout.widget.ConstraintLayout>

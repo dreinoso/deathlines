@@ -5,7 +5,10 @@
     <dimen name="match_constraint">0dp</dimen>
     <dimen name="btn_corner_width">64dp</dimen>
     <dimen name="btn_corner_heigth">64dp</dimen>
-    <dimen name="subtitle_size">32sp</dimen>
+    <dimen name="subtitle_size">24sp</dimen>
     <dimen name="form_edit_text_size">24sp</dimen>
     <dimen name="ll_form_margin">16dp</dimen>
+    <dimen name="form_edit_text_margin_horizontal">16dp</dimen>
+    <dimen name="form_edit_text_margin_padding">8dp</dimen>
+    <dimen name="title_size">32sp</dimen>
 </resources>

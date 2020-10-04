@@ -11,4 +11,5 @@
     <string name="enter_description">Description</string>
     <string name="enter_date">Set deathline</string>
     <string name="add_task">New Task</string>
+    <string name="set_deathline">To finish just set an realistic deathline</string>
 </resources>
